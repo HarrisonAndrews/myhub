@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyHub Git Issue Helper</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<h1>List issues</h1>
+
+<p>Below is the listed issues from your github</p>
+<ul class="get_issues">
+  <% issues.each do |stuff| %>
+      <li>
+        <%= issues.stuff %> - <%= stuff.issues %>
+        <form action="/api/org/issues<%= issue.id %>" method="post">
+          <input type="submit" value="Get Issues!">
+        </form>
+      </li>
+  <% end %>
+</ul>
+</body>
+</html>
